@@ -5,7 +5,7 @@ public class EstimoteListener : MonoBehaviour {
 
 	private AndroidJavaObject estimoteData = null;
 	bool hasClicked = false;
-	
+	/*
 	void Start() {
 		if(estimoteData == null) {
 			
@@ -17,4 +17,5 @@ public class EstimoteListener : MonoBehaviour {
 			}
 		}
 	}
+	*/
 }

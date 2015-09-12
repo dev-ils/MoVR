@@ -3,8 +3,7 @@ using System.Collections;
 
 public class KeyboardController : MonoBehaviour {
 
-	public float speed = 3F;
-	private float yPosition = 1F;
+	public float speed = 300F;
 	
 	// Use this for initialization
 	void Start () {
@@ -28,6 +27,8 @@ public class KeyboardController : MonoBehaviour {
 			transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
 		}
 
-		transform.position = new Vector3(transform.position.x, yPosition, transform.position.z);
+		// Makes the camera follow the height of the terrain
+		float terrainHeight = Terrain.activeTerrain.SampleHeight(transform.position);
+		transform.position = new Vector3(transform.position.x, terrainHeight + 5, transform.position.z);
 	}
 }

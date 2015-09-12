@@ -5,7 +5,8 @@ public class FlicListener : MonoBehaviour {
 	
 	private AndroidJavaObject flicData = null;
 	bool hasClicked = false;
-	
+
+	/*
 	void Start() {
 		if(flicData == null) {
 
@@ -17,4 +18,5 @@ public class FlicListener : MonoBehaviour {
 			}
 		}
 	}
+	*/
 }
