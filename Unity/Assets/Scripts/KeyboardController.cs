@@ -4,6 +4,7 @@ using System.Collections;
 public class KeyboardController : MonoBehaviour {
 
 	public float speed = 300F;
+	private float characterHeight = 4F;
 	
 	// Use this for initialization
 	void Start () {
@@ -11,6 +12,9 @@ public class KeyboardController : MonoBehaviour {
 	
 	void Update()
 	{
+
+		#if UNITY_STANDALONE_WIN
+
 		if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)){
 			transform.Translate(new Vector3(speed * Time.deltaTime,0,0));
 		}
@@ -29,6 +33,8 @@ public class KeyboardController : MonoBehaviour {
 
 		// Makes the camera follow the height of the terrain
 		float terrainHeight = Terrain.activeTerrain.SampleHeight(transform.position);
-		transform.position = new Vector3(transform.position.x, terrainHeight + 5, transform.position.z);
+		transform.position = new Vector3(transform.position.x, terrainHeight + characterHeight, transform.position.z);
+
+		#endif
 	}
 }

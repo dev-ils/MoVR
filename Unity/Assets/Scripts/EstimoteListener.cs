@@ -5,8 +5,8 @@ public class EstimoteListener : MonoBehaviour {
 
 	private AndroidJavaObject estimoteData = null;
 	bool hasClicked = false;
-	/*
 	void Start() {
+		#if UNITY_ANDROID
 		if(estimoteData == null) {
 			
 			using(AndroidJavaClass pluginClass = new AndroidJavaClass("dev_ils.sensordata.FlicData")) {
@@ -16,6 +16,6 @@ public class EstimoteListener : MonoBehaviour {
 				}
 			}
 		}
+		#endif
 	}
-	*/
 }

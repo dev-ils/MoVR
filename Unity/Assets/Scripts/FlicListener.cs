@@ -5,9 +5,11 @@ public class FlicListener : MonoBehaviour {
 	
 	private AndroidJavaObject flicData = null;
 	bool hasClicked = false;
-
-	/*
+	
 	void Start() {
+
+		#if UNITY_ANDROID
+
 		if(flicData == null) {
 
 			using(AndroidJavaClass pluginClass = new AndroidJavaClass("dev_ils.sensordata.FlicData")) {
@@ -17,6 +19,8 @@ public class FlicListener : MonoBehaviour {
 				}
 			}
 		}
+
+		#endif
+	
 	}
-	*/
 }
