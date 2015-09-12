@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Estimote : MonoBehaviour {
+public class EstimoteListener : MonoBehaviour {
 
 	private AndroidJavaObject estimoteData = null;
 	bool hasClicked = false;
