@@ -18,6 +18,8 @@ public class MouseController : MonoBehaviour {
 
 	void Update ()
 	{
+		#if UNITY_STANDALONE_WIN
+
 		if (axes == RotationAxes.MouseXAndY)
 		{
 			// Read the mouse input axis
@@ -43,6 +45,8 @@ public class MouseController : MonoBehaviour {
 			Quaternion yQuaternion = Quaternion.AngleAxis (-rotationY, Vector3.right);
 			transform.localRotation = originalRotation * yQuaternion;
 		}
+
+		#endif
 	}
 	void Start ()
 	{
